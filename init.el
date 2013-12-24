@@ -38,6 +38,11 @@
 
 (mapc 'install-if-needed to-install)
 
+(setq visible-bell t
+      font-lock-maximum-decoration t
+      color-theme-is-global t
+      truncate-partial-width-windows nil)
+
 ;; Highlight current line
 (global-hl-line-mode 1)
 
@@ -132,9 +137,6 @@
 ;; -------------------- extra nice things --------------------
 ;; use shift to move around windows
 (windmove-default-keybindings 'shift)
-
-;; Turn beep off
-(setq visible-bell nil)
 
 ;; Handles whitespace, tabs, etc
 (setq-default show-trailing-whitespace t)
