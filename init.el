@@ -55,6 +55,10 @@
 ;; Highlight matching parentheses when the point is on them.
 (show-paren-mode 1)
 
+;; Update path for shell and finding executables
+(setenv "PATH" (concat (getenv "PATH") ":/usr/local/bin"))
+(setq exec-path (append exec-path '("/usr/local/bin")))
+
 (require 'magit)
 (global-set-key "\C-xg" 'magit-status)
 
