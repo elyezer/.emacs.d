@@ -67,6 +67,16 @@
 ;; Make backups of files, even when they're in version control
 (setq vc-make-backup-files t)
 
+;; Always display line and column numbers
+(setq line-number-mode t)
+(setq column-number-mode t)
+
+;; Lines should be 80 characters wide, not 72
+(setq fill-column 80)
+
+;; Show empty lines after buffer end
+(set-default 'indicate-empty-lines t)
+
 (require 'magit)
 (global-set-key "\C-xg" 'magit-status)
 
